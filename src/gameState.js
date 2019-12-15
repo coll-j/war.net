@@ -11,14 +11,17 @@ var gameState = {
     //     //   this.load.image('underwater2', 'skies/underwater2.png');
     //     //   this.load.spritesheet('duck', 'sprites/chick.png', 16, 18);
     //     //   this.load.setPreloadSprite(this.loadingBar);
+             this.load.image('background', 'rsrc/bg-01.png');
              this.load.image('trans', 'rsrc/box.png');
              this.load.audio('click_sfx', 'sound/pickup-mgc.ogg');
-    
+             this.load.spritesheet('box_animation', 'rsrc/click_anim720x720.png', 720, 720, 13);
          },
 
     create: function create() {
         console.log('gamestate');
-        this.stage.backgroundColor = 0x1E1E1E;
+        //this.stage.backgroundColor = 0x1E1E1E;
+        bg = game.add.image(0,0, 'background');
+
      //   this.add.text(this.world.centerX, this.world.centerY, 'Game Play', { fill: 'white', font: '96px serif', strokeThickness: 3 });
         var graphics = this.add.graphics(0,0);
 
