@@ -11,11 +11,22 @@ var Tile = function(x,y, color, graphic, grid)
         console.log('you clicked the sprite');
         this.grid.click(x, y);
         test++;
+        sprite.inputEnabled = false;
+
+        game.time.events.add(500, this.clickDelay, this);
+
+
         //if(this.grid.allSame(0, 0)==true)
         
         // this.setColor(0XFFFF00);
         // this.drawRect();
         return;
+    }
+
+    this.clickDelay = function(){
+        sprite.inputEnabled = true;
+        sprite.input.useHandCursor = true;
+        sprite.events.onInputDown.add(this.click, this);
     }
 
     this.getColor = function()

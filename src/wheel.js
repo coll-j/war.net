@@ -6,7 +6,7 @@ var Wheel = function(graphics)
     {
         let color = this.colors[0]
         this.colors.shift();
-        this.colors.push(color_lib[Math.floor(Math.random() * 3)]);
+        this.colors.push(color_lib[Math.floor(Math.random() * colorCount[level_counter])]);
 
         this.drawWheel();
         return color;
@@ -35,7 +35,7 @@ var Wheel = function(graphics)
 
     for(let i = 0; i < 5; i++)
     {
-        this.colors.push(color_lib[Math.floor(Math.random() * 3)]);
+        this.colors.push(color_lib[Math.floor(Math.random() * colorCount[level_counter])]);
     }
 
     this.drawWheel();
