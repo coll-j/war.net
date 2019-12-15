@@ -40,15 +40,17 @@ var Grid = function(wheel)
                 before = grid.tiles[i][j].getColor();
             }
         }
-        console.log("lmao u won"); 
+        console.log("lmao u won");
+        console.log("ur score : " + score);
+        score = 0; 
         gameState.nextLevel();   
     }
 
     this.click = function(x, y)
     {
         fx.play('click_sfx');
-        clickCount++;
-        console.log(clickCount);
+        score++;
+        console.log(score);
 
         if(x == undefined)
         {

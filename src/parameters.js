@@ -6,7 +6,7 @@ var test = 0;
 var fx;
 var grid_size = 2;
 var level_counter = 1;
-var clickCount = 0;
+var score = 0;
 var colorCount = [2, 2, 3, 3, 4, 4, 5, 5, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 10, 10, 10];
 var gsarray = [2, 2, 3, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7];
 // color_lib bisa sampai lvl 7
