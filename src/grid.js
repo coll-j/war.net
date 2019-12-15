@@ -46,6 +46,7 @@ var Grid = function(wheel)
 
     this.click = function(x, y)
     {
+        fx.play('click_sfx');
         clickCount++;
         console.log(clickCount);
 
@@ -67,20 +68,6 @@ var Grid = function(wheel)
         // }
             //this.state.start('menu');
     }  
-
-    this.allSame = function(x, y) {
-        for(x = 0; x < 10; x++)
-		{
-			for(y = 0; y < 10; y++)
-			{
-				if(!(this.tiles[x][y].equals(this.tiles[0][0])))
-				{
-					return false;
-				}
-			}
-		}
-		return true;
-    }
 
     this.wheel = wheel;
 }
