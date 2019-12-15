@@ -17,13 +17,25 @@ var Grid = function(wheel)
             return;
 		}
 		
+        // var animatedBox = game.add.sprite(x, y, 'box_animation', 13);
+        // animatedBox.bringToTop(animatedBox);
+        // animatedBox.width = grid_size * box_size;
+        // animatedBox.height = grid_size* box_size;
+        // anim = animatedBox.animations.add('effect');
+
+        // anim.onStart.add(this);
+        // anim.onComplete.add(this);
+
         grid.tiles[x][y].setColor(colort);
         grid.tiles[x][y].drawRoundedRect();
+        //anim.play(20);
 
 		floodFill(x+1, y, colorb, colort, grid);
         floodFill(x-1, y, colorb, colort, grid);
         floodFill(x, y+1, colorb, colort, grid);
         floodFill(x, y-1, colorb, colort, grid);
+
+
         
        // console.log('floodfill grid');
     }
@@ -34,14 +46,12 @@ var Grid = function(wheel)
             for(let j = 0; j < grid_size; j ++)
             {
                 if (before != grid.tiles[i][j].getColor()){
-                    console.log("not yet");
                     return;
                 }
                 before = grid.tiles[i][j].getColor();
             }
         }
-        console.log("lmao u won");
-        console.log("ur score : " + score);
+        console.log("score : " + score);
         score = 0; 
         gameState.nextLevel();   
     }
