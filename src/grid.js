@@ -60,6 +60,7 @@ var Grid = function(wheel)
     {
         fx.play('click_sfx');
         score++;
+        gameState.movement.setText("Movement : " + score);
         console.log(score);
 
         if(x == undefined)

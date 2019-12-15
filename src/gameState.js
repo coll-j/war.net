@@ -38,6 +38,13 @@ var gameState = {
         color_lib = color_array[level_counter];
         var wheel = new Wheel(graphics);
         var grid = new Grid(wheel);
+
+        var style2 = {
+            font:"32px Neou Thin",
+            fill:'white'
+        };
+
+        this.movement = this.add.text(0, 0, 'Movement : ' + score, style2);
         
         for(let i = 0; i < grid_size; i++)
         {
